@@ -9,8 +9,8 @@
   	-webkit-border-radius: 0;
        -moz-border-radius: 0;
             border-radius: 0;
-  	background-color: #3C3F45;
-  	color: #23262C;
+  	background-color: #E0E0E0;
+  	color: #55606A;
   	vertical-align: middle;
 	line-height: 1em;
   	text-align: center;
@@ -33,7 +33,7 @@
 .button:hover,
 .button:active,
 .button:focus {
-	background-color: #DE5E60;
+	background-color: #FF7B3A;
 	color:#FFFFFF;
 }
 
@@ -88,8 +88,8 @@
 	position: relative;
   	display: block;
   	padding: 15px;
-	background:#3C3F45;
-	color: #23262C;
+	background:#F1F1F1;
+	color: #55606A;
 	font-size: 18px;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -107,17 +107,17 @@
 
 .accordion-heading:hover .accordion-toggle,
 .accordion-heading:hover .accordion-toggle.inactive {
-	background:#DE5E60;
+	background:#FF8C53;
 	color:#FFFFFF;
 }
 
 .accordion-heading .accordion-toggle.active {
-	background:#DE5E60;
+	background:#FF8C53;
 	color:#FFFFFF;
 }
 
 .accordion-heading .accordion-toggle.inactive {
-	background:#3C3F45;
+	background:#F1F1F1;
 }
 
 .accordion-heading.accordionize .accordion-toggle span,
@@ -126,7 +126,7 @@
     top: 50%;
     right: 20px;
     margin: -8px 0 0 0;
-    color: #23262C;
+    color: #55606A;
     font-size: 18px;
 	
 	-webkit-transition: all 0.1s linear 0s;
@@ -170,7 +170,7 @@
 }
 
 .accordion-inner {
-	background: #26292E;
+	background: #F1F1F1;
   	padding: 16px 20px;
 	border: none;
 }
@@ -219,7 +219,12 @@
 }
 
 .alert-standard {
-  	background-color: #3C3F45;
+  	background-color: #F1F1F1;
+	color: #55606A;
+}
+
+.alert-standard .close {
+	color: #55606A;
 }
 
 .alert-success {
@@ -262,7 +267,7 @@
 
 .nav > li > a {
   	display: block;
-  	color: #23262C;
+  	color: #55606A;
   	font-size: 18px;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -274,7 +279,7 @@
 
 .nav > li > a:hover,
 .nav > li > a:focus {
-  	background-color: #DE5E60;
+  	background-color: #FF8C53;
 	color: #FFFFFF;
   	text-decoration: none;
   	display: block;
@@ -313,7 +318,7 @@
 }
 
 .nav-tabs > li > a {
-	background: #3C3F45;
+	background: #F1F1F1;
 	padding:15px;
   	line-height: 20px;
 }
@@ -322,7 +327,7 @@
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:focus {
 	border: none;
-  	background-color: #DE5E60;
+  	background-color: #FF8C53;
 	color: #FFFFFF;
   	cursor: default;
 }
@@ -345,7 +350,7 @@
 .tab-content {
   	overflow: auto;
 	padding: 20px;
-	background: #26292E;
+	background: #F1F1F1;
 }
 
 .tab-content > .tab-pane {
@@ -363,7 +368,7 @@
 
 blockquote {
   	padding: 15px 20px;
-  	border-left: 2px solid #DE5E60;
+  	border-left: 2px solid #FF8C53;
 }
 
 blockquote p {
@@ -428,8 +433,8 @@ blockquote small:before {
   	-webkit-border-radius: 0;
        -moz-border-radius: 0;
           	border-radius: 0;
-  	background-color: #FFFFFF;
-  	color: #26292E;
+  	background-color: #FF8C53;
+  	color: #FFFFFF;
   	text-align: center;
   	text-decoration: none;
 }
@@ -447,7 +452,7 @@ blockquote small:before {
   	left: 50%;
   	margin-left: -15px;
   	border-width: 10px 10px 0;
-  	border-top-color: #FFFFFF;
+  	border-top-color: #FF8C53;
 }
 
 .tooltip.right .tooltip-arrow {
@@ -455,7 +460,7 @@ blockquote small:before {
   	left: 0;
   	margin-top: -15px;
   	border-width: 10px 10px 10px 0;
-  	border-right-color: #FFFFFF;
+  	border-right-color: #FF8C53;
 }
 
 .tooltip.left .tooltip-arrow {
@@ -463,7 +468,7 @@ blockquote small:before {
   	right: 0;
   	margin-top: -15px;
   	border-width: 10px 0 10px 10px;
-  	border-left-color: #FFFFFF;
+  	border-left-color: #FF8C53;
 }
 
 .tooltip.bottom .tooltip-arrow {
@@ -471,7 +476,7 @@ blockquote small:before {
   	left: 50%;
   	margin-left: -15px;
   	border-width: 0 10px 10px;
-  	border-bottom-color: #FFFFFF;
+  	border-bottom-color: #FF8C53;
 }
 
 /* ==================================================
@@ -479,7 +484,7 @@ blockquote small:before {
 ================================================== */
 
 .info-block {
-    border-left: 2px solid #DE5E60;
+    border-left: 2px solid #FF8C53;
     overflow: hidden;
     padding: 20px;
     position: relative;
@@ -535,11 +540,11 @@ blockquote small:before {
 ================================================== */
 
 .page .progress {
-	background-color: #26292E;
+	background-color: #E0E0E0;
 }
 
 .page-alternate .progress {
-	background-color: #2F3238;
+	background-color: #E0E0E0;
 }
 
 .progress-bar {
@@ -563,7 +568,7 @@ blockquote small:before {
 }
 
 .progress .bar {
-	background-color: #DE5E60;
+	background-color: #FF8C53;
 	background-image: none;
 	
 	-webkit-border-radius: 0;
@@ -631,7 +636,7 @@ blockquote small:before {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #DE5E60;
+	background: #FF8C53;
 	
 	opacity: 0.45;
 	filter: alpha(opacity=45);
@@ -672,7 +677,7 @@ blockquote small:before {
 	width: 70px;
 	height: 70px;
 
-	background: #26292E;
+	background: transparent;
 	
 	-webkit-transition: all 400ms ease-out 0s;	
 	   -moz-transition: all 400ms ease-out 0s;
@@ -710,7 +715,7 @@ blockquote small:before {
 
 .icons-example ul li:hover a,
 .icons-example ul li.active a {
-	background-color: #DE5E60;	
+	background-color: #FF8C53;	
 	
 	-webkit-transform: rotateY(180deg);
 	   -moz-transform: rotateY(180deg);
