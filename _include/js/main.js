@@ -78,7 +78,7 @@ CHAKRA.slider = function(){
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
 											{image : 'Aero Photos & Assets/Team Photos/Griffin with Maja.jpg', title : '<div class="slide-content">Griffin and a plane!</div>', thumb : '', url : ''},
-											{image : 'Aero Photos & Assets/Team Photos/Team Carbon.jpg', title : '<div class="slide-content">Carbon Fiber Layups</div>', thumb : '', url : ''},
+											{image : '_include/img/slider-images/image02.jpg', title : '<div class="slide-content">Responsive Design</div>', thumb : '', url : ''},
 											{image : '_include/img/slider-images/image03.jpg', title : '<div class="slide-content">FullScreen Gallery</div>', thumb : '', url : ''},
 											{image : '_include/img/slider-images/image04.jpg', title : '<div class="slide-content">Showcase Your Work</div>', thumb : '', url : ''}  
 									],
