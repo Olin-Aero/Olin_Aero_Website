@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Howdy?"
+date:   2018-02-25 14:08:58 +0000
+categories: greetings
+---
+
+How do you do?

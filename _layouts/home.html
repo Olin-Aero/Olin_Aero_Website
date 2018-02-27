@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<h1>Latest Updates:</h1>
+
+{% for post in site.posts %}
+	<div class="homepage-post">
+		<a href="{{ post.url | relative_url }}"><h2>{{post.title | escape}}</h2></a>
+		<h3>{{post.date | date: "%B %e, %Y" }}</h3>
+		{{post.content}}
+	</div>
+{% endfor %}
