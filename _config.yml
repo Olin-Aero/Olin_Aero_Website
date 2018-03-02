@@ -17,7 +17,7 @@ title: Olin AERO
 description: >- # this means to ignore newlines until "baseurl:"
   Olin College of Engineering's aerial robotics club.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://localhost:4567" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://olinaero.surge.sh" # the base hostname & protocol for your site, e.g. http://example.com
 link-colors:
   - yellow
   - green
@@ -25,7 +25,7 @@ link-colors:
 team:
   -
     name: Adam Selker
-    photo: Adam
+    photo: adam
     year: 2020
   - 
     name: Bogdan Vitoc
@@ -37,7 +37,7 @@ team:
     year: 2019
   - 
     name: Erika Lu
-    photo: Erika
+    photo: erika
     year: 2021
   - 
     name: Jamie (Yoonyoung) Cho

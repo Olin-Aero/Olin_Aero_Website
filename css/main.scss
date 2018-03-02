@@ -175,6 +175,7 @@ header {
 	text-decoration: none;
 	display: block;
 	width: 100%;
+	cursor: pointer;
 }
 
 .site-title .subtitle {
@@ -311,7 +312,7 @@ header {
 
     .img-404 {
     	display: inline-block; 
-    	background: url('{{ "/assets/images/404.png" | absolute_url }}') no-repeat; 
+    	background: url('{{ "/assets/images/404.png" | relative_url }}') no-repeat; 
     	overflow: hidden; 
     	text-indent: -9999px; 
     	text-align: left;
