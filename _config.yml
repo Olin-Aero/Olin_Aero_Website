@@ -17,19 +17,84 @@ title: Olin AERO
 description: >- # this means to ignore newlines until "baseurl:"
   Olin College of Engineering's aerial robotics club.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://localhost:4567" # the base hostname & protocol for your site, e.g. http://example.com
 link-colors:
   - yellow
   - green
   - pink
+team:
+  -
+    name: Adam Selker
+    photo: Adam
+    year: 2020
+  - 
+    name: Bogdan Vitoc
+    photo: bogdan
+    year: 2021
+  -
+    name: Eric Miller
+    photo: eric
+    year: 2019
+  - 
+    name: Erika Lu
+    photo: Erika
+    year: 2021
+  - 
+    name: Jamie (Yoonyoung) Cho
+    photo: jamie
+    year: 2019
+  -
+    name: Khang Vu
+    photo: khang
+    year: 2021
+  - 
+    name: Lydia Zuehsow
+    photo: lydia
+    year: 2019
+  - 
+    name: Mark Goldwater
+    photo: mark
+    year: 2021
+  - 
+    name: Max Schommer
+    photo: max
+    year: 2019
+  -
+    name: Nathan Estill
+    photo: nathan_e
+    year: 2021
+  - 
+    name: Nathan Shuster
+    photo: nathan_s
+    year: 2021
+  -
+    name: Nathaniel Yee
+    photo: nathan_y
+    year: 2019
+  -
+    name: Paul Nadan
+    photo: paul
+    year: 2020
+
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 plugins:
   - jekyll-feed
-
 exclude:
   - Gemfile
   - Gemfile.lock
   - Vagrantfile
   - ubuntu-xenial-16.04-cloudimg-console.log
+  - bootstrap.sh

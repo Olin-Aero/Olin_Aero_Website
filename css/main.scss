@@ -10,17 +10,144 @@ $gray: #a7a9ac;
 $yellow: #ffc20e;
 $green: #349e49;
 $pink: #c77eb5;
+$peach: #faf7f4; 
+
+@font-face {
+    font-family: 'FF Din';
+    src: url('{{ "/assets/fonts/ff_din.woff" | relative_url }}') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FF Din';
+    src: url('{{ "/assets/fonts/ff_din_Bold.woff" | relative_url }}') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FF Din';
+    src: url('{{ "/assets/fonts/ff_din_Italic.woff" | relative_url }}') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FF Din';
+    src: url('{{ "/assets/fonts/ff_din_BoldItalic.woff" | relative_url }}') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FF Din';
+    src: url('{{ "/assets/fonts/ff_din_CondMedium.woff" | relative_url }}') format('woff');
+    font-weight: 500;
+    font-stretch: condensed;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FF Din';
+    src: url('{{ "/assets/fonts/ff_din_MediumItalic.woff" | relative_url }}') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'BT Dutch';
+    src: url('{{ "/assets/fonts/bt_dutch_RmHd.woff" | relative_url }}') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BT Dutch';
+    src: url('{{ "/assets/fonts/bt_dutch_RmBd.woff" | relative_url }}') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BT Dutch';
+    src: url('{{ "/assets/fonts/bt_dutch_ItHd.woff" | relative_url }}') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
 
 
-h4 {
-	font-family: serif;
-	font-style: italic;
-	color: $gray;
+@font-face {
+    font-family: 'BT Dutch';
+    src: url('{{ "/assets/fonts/bt_dutch_SeBd.woff" | relative_url }}') format('woff');
+    font-weight: 600;
+    font-style: normal;
 }
 
 body {
-	background-color: $metallic_silver;	
-	font-size: 13pt;
+	background-color: black;	
+	background-image: url({{ "/assets/images/bg-content.png" | relative_url }});
+	font-family: 'BT Dutch', serif;
+	font-size: 12pt;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'FF Din', sans-serif;
+	margin: 0;
+}
+
+h1 {}
+
+h4 {}
+
+.page img, .homepage-top img {
+	width: 50%;
+	float: left;
+	margin-right: 1em;
+}
+
+.homepage-top iframe {
+	width: 60%;
+	float: right;
+	margin-left: 1em;	
+}
+
+.page-content {
+	margin: 30px 0px;
+}
+
+.title {
+	font-family: 'FF Din', sans-serif;
+	font-size: 4em;
+	font-weight: bold;
+	color: $blue;
+	text-decoration: none;
+
+	&.title-post {
+		font-size: 1.5em;
+	}
+}
+
+.title2 {
+	font-family: 'FF Din', sans-serif;
+	font-size: 2.5em;
+	font-weight: bold;
+	color: $blue;
+}
+
+.subtitle {
+	font-family: 'FF Din', sans-serif;
+	font-size: 1.2em;
+	font-weight: 500;
+	font-style: italic;
+	color: $gray;
+
+	&.subtitle-post {
+		font-size: 1em;
+		font-style: normal;
+		font-weight: bold;
+		font-stretch: condensed;
+	}
 }
 
 #page {
@@ -32,8 +159,12 @@ body {
 	padding: 10px;
 }
 
+header {
+	margin: -10px;
+	background-color: $peach;
+}
+
 .site-title {
-	/*background-image: url({{ "/images/clouds.jpg" | relative_url }});*/
 	box-sizing: border-box;
 	padding: 25px;
 	text-align: center;
@@ -41,39 +172,48 @@ body {
 }
 
 .site-title .title-link {
-	font-family: sans-serif;
-	color: $blue;
-	font-weight: bold;	
-	font-size: 4em;
 	text-decoration: none;
+	display: block;
+	width: 100%;
 }
 
-.site-title h4 {
+.site-title .subtitle {
 	margin: 0;
+}
+
+.site-nav-wrapper {
+	width: 100%;
+	background-image: url('{{ "/assets/images/stripes-nav.png" | relative_url }}')
 }
 
 .site-nav {
 	display: flex;
+	height: 100%;
 	width: 80%;
 	margin: auto;
 }
 
 .site-nav .page-link {
 	color: black;
-	font-family: sans-serif;
 	flex-grow: 1;
+	font-family: 'FF Din', sans-serif;
 	font-size: 1.3em;
-	text-transform: uppercase;
-	padding: 10px 10px 2px 10px;
+	font-stretch: condensed;
+	font-weight: 500;
+	padding: 10px 10px 0px 10px;
 	text-align: center;
 	text-decoration: none;
+	text-transform: uppercase;
 
-	&::after {
+	&::after {		
 		content: "";
-		width: 80%;
-		height: 5px;
 		display: block;
+		height: 6px;
 		margin: auto;
+		opacity: 0.75;
+		position: relative;
+		transition: transform 0.1s ease-out;
+		width: 150px;
 	}
 
 	&.yellow::after {
@@ -89,15 +229,102 @@ body {
 	}
 
 	&:hover::after {
-		width: 90%;
+		transform: scaleY(1.25);
+		transform-origin: bottom;
 	}
 }
 
 .homepage-post {
-	border: 2px solid darken(rgb(250, 247, 244), 10%);
-	padding: 5px;
-	margin: 15px 0px;
+	background-color: $peach;
 	border-radius: $border_radius;
-	background-color: rgb(250, 247, 244);
+	border: 2px solid darken($peach, 10%);
+	margin: 15px 0px;
+	padding: 5px;
 }
 
+.sponsors {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-bottom: 10px;
+}
+
+.sponsors img {
+	width: 300px;
+	margin: 10px;
+}
+
+.hr-divider-container {
+	width: 100%; 
+	text-align: center;
+	position: relative;
+}
+
+.hr-divider {
+	margin: auto;
+	background-color: black;
+	width: 80%;
+	height: 1px;
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.hr-divider-container span {
+	position: relative;
+	font-size: 1.3em; 
+	background-color: white; 
+	padding: 0 20px;
+	z-index: 100;
+	top: -0.1em;
+	font-weight: 600;
+}
+
+.headshots {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.headshot {
+	margin: 10px;
+}
+
+.headshot img {
+	width: 200px;
+	z-index: -1;
+}
+
+.headshot div {
+	font-family: 'BT Dutch', sans-serif;
+	font-weight: 500;
+	text-align: center;
+}
+
+.notfound-404 {
+	margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+
+    .img-404 {
+    	display: inline-block; 
+    	background: url('{{ "/assets/images/404.png" | absolute_url }}') no-repeat; 
+    	overflow: hidden; 
+    	text-indent: -9999px; 
+    	text-align: left;
+    	background-position: -0px -0px; 
+    	width: 350px; 
+    	height: 516px;
+    	transition: transform 0.1s ease-out, margin-bottom 0.05s;
+    	margin-bottom: -100px;
+
+    	&:hover {
+	    	background-position: -0px -516px;
+	    	transform: rotate(180deg);
+	    	margin-bottom: 0;
+    	}
+    }
+}

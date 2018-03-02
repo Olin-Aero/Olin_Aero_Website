@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="teampage">
+	<div class="headshots">
+		{% for person in site.team %}
+			<div class="headshot">
+				{% capture url %}
+					/assets/images/team/{{person.photo}}.jpg
+				{% endcapture %}
+				<img src="{{ url | lstrip | relative_url }}" alt="image" />
+				<div>{{ person.name }} ('{{ person.year | slice: 2, 3 }})</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>

@@ -2,14 +2,32 @@
 layout: default
 ---
 
-{{ content }}
-
-<h1>Latest Updates:</h1>
-
-{% for post in site.posts %}
-	<div class="homepage-post">
-		<a href="{{ post.url | relative_url }}"><h2>{{post.title | escape}}</h2></a>
-		<h3>{{post.date | date: "%B %e, %Y" }}</h3>
-		{{post.content}}
+<div class="homepage">
+	<div class="homepage-top">
+		{{ content }}
 	</div>
-{% endfor %}
+
+	<div class="hr-divider-container">
+		<span> Sponsors </span>
+		<div class="hr-divider"></div>
+	</div>
+
+	<div class="sponsors">
+		{% for image in site.static_files %}
+		    {% if image.path contains 'images/sponsors' %}
+		        <img src="{{ image.path | relative_url }}" alt="image" />
+		    {% endif %}
+		{% endfor %}
+	</div>
+
+	<div class="hr-divider-container">
+		<span> Latest Updates </span>
+		<div class="hr-divider"></div>
+	</div>
+
+	{% for post in site.posts %}
+		<div class="homepage-post">
+			{% include post.html %}
+		</div>
+	{% endfor %}
+</div>

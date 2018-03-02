@@ -27,3 +27,6 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 # Added at 2018-02-27 02:25:05 +0000 by vagrant:
 gem "jekyll-compass", "~> 0.2.3"
+
+# Added at 2018-03-02 05:27:09 +0000 by vagrant:
+gem "rouge", "~> 3.1"

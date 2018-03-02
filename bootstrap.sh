@@ -10,9 +10,10 @@ git clone https://github.com/rbenv/rbenv.git /home/vagrant/.rbenv
 cd /home/vagrant/.rbenv && src/configure && make -C src
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> /home/vagrant/.bashrc
 echo 'eval "$(rbenv init -)"' >> /home/vagrant/.bashrc
+source ~/.bashrc
 
 # ruby-build (as rbenv plugin)
-mkdir -p /home/vagrant/.rbenv/bin/rbenv/plugins
+mkdir -p /home/vagrant/.rbenv/plugins
 git clone https://github.com/rbenv/ruby-build.git /home/vagrant/.rbenv/plugins/ruby-build
 
 # install ruby
@@ -21,6 +22,7 @@ MAKE_OPTS="-j $NUM_CORES" /home/vagrant/.rbenv/bin/rbenv install -s 2.5.0
 /home/vagrant/.rbenv/bin/rbenv global 2.5.0
 
 # install bundler
-gem install bundler
+sudo /home/vagrant/.rbenv/shims/gem install bundler
 cd /vagrant
 bundle
+bundle exec jekyll serve -H 0.0.0.0 --force-polling

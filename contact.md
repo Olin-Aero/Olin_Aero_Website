@@ -4,4 +4,4 @@ title: Contact
 permalink: /contact/
 ---
 
-Contact us!
+- **For sponsorship information** please contact Max: [maximilian.schommer@students.olin.edu](mailto:maximilian.schommer@students.olin.edu)
