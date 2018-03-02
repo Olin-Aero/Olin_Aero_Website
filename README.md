@@ -1,6 +1,6 @@
 # Olin AERO Website
 
-To get compile things, please get [vagrant](https://www.vagrantup.com/) and then:
+To build the site, please get [vagrant](https://www.vagrantup.com/) and then:
 
 ```bash
 git clone -b iarc <this repo>
