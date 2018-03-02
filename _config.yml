@@ -22,7 +22,7 @@ link-colors:
   - yellow
   - green
   - pink
-team:
+team: # gets sorted at build time, so don't worry about order here
   -
     name: Adam Selker
     photo: adam

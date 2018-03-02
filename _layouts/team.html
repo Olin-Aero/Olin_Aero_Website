@@ -4,7 +4,8 @@ layout: default
 
 <div class="teampage">
 	<div class="headshots">
-		{% for person in site.team %}
+		{% assign team = site.team | sort:"name" %}
+		{% for person in team %}
 			<div class="headshot">
 				{% capture url %}
 					/assets/images/team/{{person.photo}}.jpg
