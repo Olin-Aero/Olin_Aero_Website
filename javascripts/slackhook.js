@@ -31,7 +31,7 @@ window.addEventListener("load", function () {
 		var actions = email == "" ? [] : [{
 			"type": "button",
 			"text": "respond",
-			"url": "mailto:" + email,
+			"url": "mailto:" + email + "?body="  + encodeURIComponent("\n\nYou wrote us:\n\"" + message + "\"")
 		}];
 
 		var json = JSON.stringify({
@@ -45,8 +45,16 @@ window.addEventListener("load", function () {
 		});
 
 		var xhttp = new XMLHttpRequest();
+		
+		xhttp.onreadystatechange = function() {
+		    if(xhttp.readyState == XMLHttpRequest.DONE && xhttp.status == 200) {
+		        window.location.replace("/");
+		    }
+		}
+
 		xhttp.open("POST", webhook, true);
 		xhttp.send(json);
+
 	};
 
 	var form = document.getElementById('contact-form');
