@@ -333,3 +333,40 @@ header {
     	}
     }
 }
+
+#contact-form {
+	display:none;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	width: 80%;
+	margin: auto;
+}
+
+#contact-form hr {
+	width: 100%;
+}
+
+#contact-form div {
+	margin: 20px 0;
+	width: 100%;
+	display: flex;
+}
+
+#contact-form label {
+	margin-right: 20px;
+}
+
+#contact-form input {
+	flex: 1;
+	max-width: 200px;
+
+	&[type="submit"] {
+		height: 30px;
+	}
+}
+
+#contact-form textarea {
+	flex: 1;
+	min-height: 200px;
+}
+
