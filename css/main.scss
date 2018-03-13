@@ -3,6 +3,7 @@
 ---
 
 $border_radius: 4px;
+$homepage-section-spacing: 30px;
 
 $blue: #009bdf;
 $metallic_silver: #a7a9ac;
@@ -105,15 +106,16 @@ pre.highlight {
 }
 
 .page img, .homepage-top img {
-	width: 50%;
+	width: 40%;
 	float: left;
 	margin-right: 1em;
 }
 
 .homepage-top iframe {
 	width: 60%;
-	float: right;
-	margin-left: 1em;	
+	margin: auto;
+	display: block;
+	// margin-left: 1em;
 }
 
 .page-content {
@@ -196,6 +198,7 @@ header {
 	height: 100%;
 	width: 100%;
 	margin: auto;
+	padding-top: 0.3em;
 	justify-content: space-evenly;
 }
 
@@ -251,15 +254,19 @@ header {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
-	margin-bottom: 10px;
 }
 
 .sponsors img {
 	width: 300px;
-	margin: 10px;
+	margin: 0 10px;
+}
+
+.homepage-section {
+	margin-top: $homepage-section-spacing;
 }
 
 .hr-divider-container {
+	margin-bottom: $homepage-section-spacing/2;
 	width: 100%; 
 	text-align: center;
 	position: relative;

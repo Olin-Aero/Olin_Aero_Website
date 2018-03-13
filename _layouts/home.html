@@ -7,12 +7,13 @@ layout: default
 		{{ content }}
 	</div>
 
-	<div class="hr-divider-container">
-		<span> Sponsors </span>
-		<div class="hr-divider"></div>
-	</div>
+	<div class="homepage-section sponsors">
+		<div class="hr-divider-container">
+			<span> Sponsors </span>
+			<div class="hr-divider"></div>
+		</div>
 
-	<div class="sponsors">
+
 		{% for image in site.static_files %}
 		    {% if image.path contains 'images/sponsors' %}
 		        <img src="{{ image.path | relative_url }}" alt="image" />
@@ -20,14 +21,17 @@ layout: default
 		{% endfor %}
 	</div>
 
-	<div class="hr-divider-container">
-		<span> Latest Updates </span>
-		<div class="hr-divider"></div>
-	</div>
 
-	{% for post in site.posts %}
-		<div class="homepage-post">
-			{% include post.html %}
+	<div class="homepage-section blog">
+		<div class="hr-divider-container">
+			<span> Latest Updates </span>
+			<div class="hr-divider"></div>
 		</div>
-	{% endfor %}
+
+		{% for post in site.posts %}
+			<div class="homepage-post">
+				{% include post.html %}
+			</div>
+		{% endfor %}
+	</div>
 </div>
